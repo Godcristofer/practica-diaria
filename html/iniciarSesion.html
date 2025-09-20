@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<title>Login y Registro</title>
+<!-- Enlace al archivo CSS para estilos -->
+<link href="../css/style_login_registro.css" rel="stylesheet"/>
+<link href="style_responsive.css" rel="stylesheet"/></head>
+<body>
+<div class="contenedor">
+<!-- Contenedor del formulario -->
+<div class="formulario-contenedor">
+<!-- Formulario de inicio de sesión -->
+<form action="../php/login.php" class="formulario login" method="POST">
+<h2 class="formulario-titulo">Iniciar Sesión</h2>
+<div class="input-contenedor">
+<label for="usuario_login">Usuario</label>
+<input id="usuario_login" name="usuario" placeholder="Ingresa tu usuario" required="" type="text"/>
+</div>
+<div class="input-contenedor">
+<label for="contrasena_login">Contraseña</label>
+<input id="contrasena_login" name="nueva_contrasena" placeholder="Ingresa tu contraseña" required="" type="password"/>
+</div>
+<button class="boton" type="submit">Iniciar Sesión</button>
+<p class="formulario-texto">
+                        ¿No tienes una cuenta?
+                        <a class="cambiar-formulario" href="#" id="registrar-enlace">Regístrate aquí</a>
+</p>
+<!-- Botón para regresar a la página principal -->
+<a class="boton-regresar" href="index.html">Volver a la Página Principal</a>
+</form>
+<!-- Formulario de registro -->
+<form action="../php/register.php" class="formulario registro" method="POST">
+<h2 class="formulario-titulo">Regístrate</h2>
+<div class="input-contenedor">
+<label for="usuario_registro">Usuario</label>
+<input id="usuario_registro" name="usuario" placeholder="Crea tu usuario" required="" type="text"/>
+</div>
+<div class="input-contenedor">
+<label for="email">Correo Electrónico</label>
+<input id="email" name="email" placeholder="Ingresa tu correo" required="" type="email"/>
+</div>
+<div class="input-contenedor">
+<label for="contrasena_registro">Contraseña</label>
+<input id="contrasena_registro" name="nueva_contrasena" placeholder="Crea tu contraseña" required="" type="password"/>
+</div>
+<div class="input-contenedor">
+<label for="repetir_contrasena">Repetir Contraseña</label>
+<input id="repetir_contrasena" name="repetir_contrasena" placeholder="Confirma tu contraseña" required="" type="password"/>
+<!-- Mensaje dinámico para contraseñas -->
+<p id="password-message" style="font-size: 0.8rem; color: red; margin-top: 5px;"></p>
+</div>
+<button class="boton" type="submit">Registrarse</button>
+<p class="formulario-texto">
+                        ¿Ya tienes una cuenta?
+                        <a class="cambiar-formulario" href="#" id="login-enlace">Inicia sesión aquí</a>
+</p>
+</form>
+</div>
+</div>
+<script src="../js/form.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

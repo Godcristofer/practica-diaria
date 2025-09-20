@@ -1,0 +1,125 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f9ca90;
+    color: #333;
+}
+
+/* Contenedor principal */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+/* Hero section */
+#hero {
+text-align: center;
+background-color: #fff;
+padding: 2rem;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#hero img {
+width: 100%;
+height: auto;
+border-radius: 10px;
+margin-bottom: 1.5rem;
+}
+
+#hero h2 {
+font-size: 2.5rem;
+color: #0044cc;
+margin-bottom: 1rem;
+}
+
+#hero p {
+font-size: 1rem;
+line-height: 1.8;
+color: #555;
+}
+
+/* Sección de atractivos */
+#atractivos {
+margin-top: 2rem;
+}
+
+#atractivos h2 {
+font-size: 2rem;
+color: #0044cc;
+text-align: center;
+margin-bottom: 2rem;
+}
+
+.atractivo {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #ffe3c7;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.atractivo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.atractivo h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.atractivo p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+/* Encabezado */
+header {
+    background-color: #be9a5d;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #f4f4f9;
+}
+
+/* Pie de página */
+footer {
+    background-color: #c8a661;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
