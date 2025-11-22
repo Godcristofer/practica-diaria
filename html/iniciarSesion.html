@@ -16,6 +16,8 @@
 <!-- Formulario de inicio de sesión -->
 <form action="../php/login.php" class="formulario login" method="POST">
 <h2 class="formulario-titulo">Iniciar Sesión</h2>
+<!-- Placeholder para mensajes de error del servidor -->
+<div id="serverError" aria-live="polite" style="color: #b00020; margin-bottom: 10px; display:none;"></div>
 <div class="input-contenedor">
 <label for="usuario_login">Usuario</label>
 <input id="usuario_login" name="usuario" placeholder="Ingresa tu usuario" required="" type="text"/>
