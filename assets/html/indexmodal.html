@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/stilo2.css" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+        <title>NorteAzul</title>
+        <style>
+        /* Additional styling for modal and other elements */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="logo-contenedor">
+                <img src="../assets/imagenes/logo01.png" alt="Logo"
+                    class="logo" />
+                <a href="index.html" class="NorteAzulFix"><h1>NorteAzul</h1></a>
+            </div>
+
+            <input type="checkbox" id="check">
+            <label for="check" class="icons">
+                <i class='bx bx-menu'></i>
+            </label>
+            <nav class="nav">
+                <a href="#home">Inicio</a>
+                <a href="#actividades">Actividades</a>
+                <a href="#destinos">Destinos</a>
+                <a href="#galeria">Galería</a>
+                <a href="#guia">Guía de viajes</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="home">
+                <div class="presentacion">
+                    <h1>DESCUBRE LAS MARAVILLAS DEL NORTE DEL PERÚ</h1>
+                    <p>Bienvenido a tu guía turística definitiva.</p>
+                    <button id="openModalBtn">Open Modal Form</button>
+                </div>
+            </section>
+
+            <section id="actividades">
+                <!-- Content for Actividades -->
+            </section>
+
+            <!-- Modal for form -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Formulario de Contacto</h2>
+                    <form id="contactForm">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email">
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <script>
+        // Constants and variables
+        const modal = document.getElementById('myModal');
+        const openModalBtn = document.getElementById('openModalBtn');
+        const closeModal = document.getElementsByClassName('close')[0];
+
+        let userList = ['Juan', 'Maria', 'Pedro']; // Array example
+        let userAction = prompt('Introduce tu acción (open/close modal):');
+        
+        // Event Listeners
+        openModalBtn.onclick = function() {
+            modal.style.display = 'block';
+            console.log('Modal Opened');
+        }
+
+        closeModal.onclick = function() {
+            modal.style.display = 'none';
+            alert('Modal Closed');
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        document.getElementById('contactForm').onsubmit = function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            if (confirm(`Submit the form? Name: ${name}, Email: ${email}`)) {
+                console.log('Form Submitted');
+                alert('Thank you for submitting the form!');
+            }
+        }
+
+        // Onchange event
+        document.getElementById('name').onchange = function() {
+            console.log('Name field changed');
+        }
+
+        // Array, loop, switch case, comparison example
+        for (let i = 0; i < userList.length; i++) {
+            console.log(`User: ${userList[i]}`);
+        }
+
+        switch (userAction) {
+            case 'open':
+                modal.style.display = 'block';
+                break;
+            case 'close':
+                modal.style.display = 'none';
+                break;
+            default:
+                alert('Unknown action!');
+        }
+    </script>
+    </body>
+
+</html>

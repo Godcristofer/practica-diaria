@@ -1,0 +1,16 @@
+se añadio integracion continua github actions para automatizar la revision y prueba del proyecto PHP<
+se planea agregar otra herramienta
+Se agregó un workflow automatizado que se ejecuta en cada push al branch main.
+Este proceso incluye:
+
+Instalación automática de PHP 8.2 y extensiones requeridas.
+
+Instalación de dependencias mediante Composer (si existen).
+
+Ejecución de pruebas con PHPUnit (si están presentes).
+
+Verificación de sintaxis PHP de todos los archivos del proyecto.
+
+Generación y subida de un artefacto con la versión lista para despliegue.
+
+El pipeline permite detectar errores temprano, asegura calidad del código y facilita futuros despliegues automatizados.

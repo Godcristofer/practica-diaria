@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto</title>
+        <link rel="stylesheet" href="../css/stilo2.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+            rel="stylesheet">
+
+        <script type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <style>
+        /* Estilos adicionales para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #mensajeConfirmacion {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center;
+            background-color: #e0ffe0;
+            padding: 10px;
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        #mensajeConfirmacion .close-msg {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="nav__contacto boton__incio1">
+            <a href="index.html"><ion-icon class="contacto__icono"
+                    name="home-outline"></ion-icon>Inicio</a>
+        </div>
+
+        <main>
+            <section id="contacto" class="fondo-contacto">
+                <div class="contacto-informacion">
+                    <h2>¡Queremos Hacer tu Visita Inolvidable!</h2>
+                    <p>¿Tienes preguntas sobre nuestra hermosa playa? ¿Buscas
+                        recomendaciones personalizadas o detalles
+                        sobre nuestras instalaciones? ¡No dudes en ponerte en
+                        contacto con nosotros! Estamos aquí para
+                        ayudarte a planificar cada detalle de tu visita y
+                        asegurarnos de que disfrutes de una experiencia
+                        única. Tu próxima aventura playera comienza aquí, ¡y
+                        queremos ser parte de ella! Envía tu mensaje y
+                        deja que hagamos el resto. ¡Esperamos saber de ti
+                        pronto!</p>
+                    <div class="iconos">
+                        <p>¡También puedes encontrarnos en nuestras redes!</p>
+                        <a
+                            href="https://www.facebook.com/?locale=es_LA"><ion-icon
+                                class="ico"
+                                name="logo-facebook">Facebook</ion-icon></a>
+                        <a href="https://www.youtube.com"><ion-icon class="ico"
+                                name="logo-youtube"></ion-icon></a>
+                        <a href="https://www.instagram.com"><ion-icon
+                                class="ico"
+                                name="logo-instagram"></ion-icon></a>
+                    </div>
+                </div>
+
+                <div class="contacto__formulario">
+                    <form id="contactForm" action="#" method="post">
+                        <h2>Contáctanos</h2>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre"
+                            placeholder="Escribe tu nombre" />
+
+                        <label for="telefono">Teléfono (opcional):</label>
+                        <input type="tel" id="telefono" name="telefono"
+                            pattern="\d{9}"
+                            title="Debe ser un número de teléfono válido con 9 dígitos"
+                            placeholder="Escribe tu teléfono" />
+
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email"
+                            placeholder="Escribe tu Email:" required />
+
+                        <label for="mensaje">Escribe un mensaje:</label>
+                        <textarea name="mensaje" id="mensaje" rows="5"
+                            placeholder="Escribe tu mensaje o pregunta"
+                            required></textarea>
+                        <input class="formulario__boton" type="submit"
+                            value="Enviar">
+                    </form>
+                    <!-- Mensaje de registro satisfactorio -->
+                    <div id="mensajeConfirmacion">¡Registro Satisfactorio!
+                        Gracias por contactarnos.
+                        <span class="close-msg" id="closeMensaje">&times;</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal para la confirmación -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>¿Está seguro de enviar sus datos?</h2>
+                <p>Por favor confirme si desea enviar su información.</p>
+                <div class="modal-buttons">
+                    <button id="confirmYes" class="modal-btn">Sí</button>
+                    <button id="confirmNo" class="modal-btn">No</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="foot1 foot">
+                <h3>Sobre Nosotros</h3>
+                <div class="separador"></div>
+                <p>En <span class="span__footer">NorteAzul</span>, celebramos la
+                    belleza de las playas peruanas y su rica cultura...</p>
+            </div>
+            <div class="foot2 foot">
+                <h3>Link</h3>
+                <div class="separador"></div>
+                <a href="#home">Inicio</a>
+                <a href="#actividades">Actividades</a>
+                <a href="#destinos">Destinos</a>
+                <a href="#galeria">Galería</a>
+                <a href="#guia">Guía de viajes</a>
+                <a href="contacto.html">Contáctanos</a>
+            </div>
+            <div class="foot3 foot">
+                <h3>Síguenos</h3>
+                <div class="separador"></div>
+                <a href="https://www.facebook.com/?locale=es_LA"><ion-icon
+                        name="logo-facebook"></ion-icon></a>
+                <a href="https://www.youtube.com"><ion-icon
+                        name="logo-youtube"></ion-icon></a>
+                <a href="https://www.instagram.com"><ion-icon
+                        name="logo-instagram"></ion-icon></a>
+            </div>
+        </footer>
+
+        <script>
+        // Referencias a los elementos del DOM
+        const modal = document.getElementById('myModal');
+        const closeModal = document.querySelector('.close');
+        const submitButton = document.querySelector('.formulario__boton'); // Botón de enviar
+        const confirmYes = document.getElementById('confirmYes');
+        const confirmNo = document.getElementById('confirmNo');
+        const form = document.getElementById('contactForm'); // Formulario completo
+        const mensajeConfirmacion = document.getElementById('mensajeConfirmacion'); // Mensaje de confirmación
+        const closeMensaje = document.getElementById('closeMensaje'); // Botón para cerrar el mensaje
+
+        // Evento para el botón "Enviar" que abre el modal
+        submitButton.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevenir el envío automático del formulario
+            modal.style.display = 'block'; // Mostrar el modal de confirmación
+        });
+
+        // Evento para el botón "Sí" en el modal
+        confirmYes.addEventListener('click', function () {
+            modal.style.display = 'none'; // Cerrar el modal
+            // Mostrar el mensaje de registro satisfactorio
+            mensajeConfirmacion.style.display = 'block';
+            // Reiniciar el formulario
+            form.reset();
+
+            // Hacer desaparecer el mensaje después de 3 segundos
+            setTimeout(function () {
+                mensajeConfirmacion.style.display = 'none';
+            }, 3000); // El mensaje desaparecerá después de 3 segundos
+        });
+
+        // Evento para el botón "No" en el modal
+        confirmNo.addEventListener('click', function () {
+            modal.style.display = 'none'; // Cerrar el modal
+        });
+
+        // Evento para cerrar el modal si se hace clic en la "X"
+        closeModal.addEventListener('click', function () {
+            modal.style.display = 'none'; // Cerrar el modal
+        });
+
+        // Evento para cerrar el mensaje de confirmación si se hace clic en la "X"
+        closeMensaje.addEventListener('click', function () {
+            mensajeConfirmacion.style.display = 'none'; // Cerrar el mensaje de confirmación
+        });
+
+        // Evento para cerrar el modal si se hace clic fuera de él
+        window.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                modal.style.display = 'none'; // Cerrar el modal si se hace clic fuera
+            }
+        });
+    </script>
+    </body>
+
+</html>

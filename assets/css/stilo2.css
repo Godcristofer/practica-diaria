@@ -1,0 +1,1046 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+}
+
+/*Aqui comienza el navegador---------------------------------*/
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 30px;
+    background: #0000003f;
+    backdrop-filter: blur(10px);
+    z-index: 50;
+}
+
+/* Logo y nombre (creado)*/
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.logo {
+    width: 50px;
+}
+
+.NorteAzulFix {
+    text-decoration: none;
+    font-family: "Dancing Script", cursive;
+    font-size: 1rem;
+    color: white;
+}
+
+/*----------------------------------------*/
+
+/* Botón de Login */
+.inicio-sesion a {
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-family: "Space Grotesk", sans-serif;
+    border: 2px solid white;
+    padding: 10px 10px;
+    border-radius: 40px;
+    transition: all 0.3s ease; /* Animación más general */
+    background-color: transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+.inicio-sesion a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+    color: #ffcf7d; /* Texto azul */
+    border-color: #ffcf7d; /* Borde azul */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Más sombra */
+    transform: translateY(-3px); /* Efecto de elevación */
+}
+
+.inicio__icono {
+    font-size: 2rem;
+    transition: transform 0.3s ease; /* Animación al hover */
+}
+
+.inicio-sesion a:hover .inicio__icono {
+    transform: scale(1.2); /* Aumenta el tamaño del ícono */
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .inicio-sesion a {
+        font-size: 1rem; /* Ajusta el tamaño de fuente */
+        padding: 10px 16px; /* Ajusta el espacio interno */
+        gap: 8px; /* Reduce el espacio entre ícono y texto */
+    }
+
+    .inicio__icono {
+        font-size: 1.8rem; /* Reduce el tamaño del ícono */
+    }
+}
+
+@media (max-width: 480px) {
+    .inicio-sesion a {
+        font-size: 0.9rem; /* Texto más pequeño */
+        padding: 8px 12px; /* Padding reducido */
+    }
+
+    .inicio__icono {
+        font-size: 1.5rem; /* Ícono más pequeño */
+    }
+}
+
+
+/*check para el responsive*/
+
+#check {
+    display: none;
+}
+
+.icons {
+    font-size: 2.8rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: none;
+}
+
+/*---------------------------------------------------*/
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav li {
+    position: relative;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-family: "Space Grotesk", sans-serif;
+    padding: 5px;
+    margin: 0;
+    border-radius: 40px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+    color: rgb(0, 0, 0);
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+.nav li:hover>ul {
+    display: block;
+}
+
+.nav li:hover>ul {
+    display: block;
+}
+
+/* Presentacion */
+.home {
+    height: 100vh;
+    background-image: url(../assets/imagenes/fondo_inicio.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.presentacion {
+    text-align: left;
+    height: 80%;
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.presentacion h1 {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.presentacion p {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.5rem;
+    max-width: 800px;
+    color: white;
+    margin-top: 32px;
+}
+
+main section {
+    text-align: center;
+}
+
+main section h2 {
+    display: inline;
+    font-size: 2.5rem;
+    font-family: "Exo 2", sans-serif;
+    color: rgb(255, 182, 86);
+}
+
+/*Aqui termina el navegador-------------------*/
+
+/* Aqui Comienza la seccion de Actividades---------------- */
+.contenedor-actividades {
+    padding: 10px 50px 40px;
+    height: auto;
+    background-color: white;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.3rem;
+}
+
+.actividads {
+    display: flex;
+    height: 400px;
+}
+
+.contenido__imagen {
+    width: 50%;
+}
+
+.contenido__imagen img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.contenido__texto {
+    width: 50%;
+    font-size: 1.2rem;
+    padding: 50px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.contenido__texto h3 {
+    font-family: "Spicy Rice", serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #d87b25a1;
+    margin-bottom: 10px;
+}
+
+.izquierda {
+    flex-direction: row-reverse;
+}
+
+/* Aqui termina la seccion de Actividades---------------- */
+
+/* Aqui Comienza la seccion de Destinos---------------- */
+/* Estilos básicos */
+#destinos {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+#destinos h2 {
+    font-size: 2.5rem;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Carousel container */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+    /* Altura del contenedor */
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* Elementos del carrusel */
+.carousel__item {
+    position: absolute;
+    width: 330px;
+    height: 350px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(0.8);
+    opacity: 0.5;
+    transition: transform 0.5s ease, opacity 0.5s ease, z-index 0.5s ease;
+}
+
+.carousel__item a {
+    text-decoration: none;
+    color: inherit;
+    /* Asegura que el color del texto sea el mismo que el del contenedor */
+}
+
+.carousel__item img {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.carousel__item h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin: 10px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.carousel__item p {
+    font-size: 0.9rem;
+    color: #555;
+    padding: 0 15px;
+    font-family: "Roboto", sans-serif;
+
+}
+
+
+.carousel__item.active {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Botones de navegación */
+.carousel__controls {
+    margin-top: 20px;
+}
+
+.carousel__controls button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel__controls button:hover {
+    background-color: #0056b3;
+}
+
+/* Aqui termina la seccion de Destinos---------------- */
+
+/* Aqui comienza la seccion de Galeria---------------- */
+
+.contenedor---imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: auto;
+    justify-content: center;
+}
+
+.contenedor---imagenes p {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.3rem;
+    padding: 10px 50px 40px;
+}
+
+.contenedor---imagenes img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    transition: all 0.6s ease-in-out;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.contenedor---imagenes img:hover {
+    transform: scale(1.2);
+}
+
+/* Aqui termina la seccion de Galeria---------------- */
+
+/* Aqui comienza la seccion de Contacto---------------- */
+.nav__contacto {
+    margin: 20px;
+    width: 120px;
+    position: absolute;
+}
+
+.nav__contacto a {
+    padding: 5px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.nav__contacto a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.boton__incio1 a {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+/* Estilos para color-version2 */
+.boton__incio2 a {
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+.fondo-contacto {
+    background-image: url(../assets/imagenes/333333.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    height: 100vh;
+}
+
+.contacto-informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    padding: 30px 60px;
+    color: white;
+}
+
+.contacto-informacion h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-family: "Exo 2", sans-serif;
+}
+
+.contacto-informacion p {
+    font-family: "Space Grotesk", sans-serif;
+    padding: 20px 20px 10px 20px;
+    font-size: 1.2rem;
+}
+
+.ico {
+    color: #ffffff;
+    font-size: 2rem;
+
+    transition: all 0.3s ease-in-out;
+    margin: 0 5px;
+}
+
+.ico:hover {
+    transform: scale(1.5);
+}
+
+.contacto__formulario {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto__formulario form {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(15px);
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.contacto__formulario label {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: start;
+}
+
+.formulario__boton {
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.formulario__boton:hover {
+    background-color: #ccc;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #ccc;
+    font-size: 0.9rem;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    border-color: rgb(255, 182, 86);
+    outline: none;
+}
+
+/* Aqui termina la seccion de Contacto------------------------ */
+
+/*Aqui termina el formulario----------------------------------*/
+
+/* Estilos para la tabla */
+/* Tablas centradas */
+.tabla__contenedor {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__contenido {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.modal__info {
+    display: flex;
+    gap: 20px;
+}
+
+.modal__info img {
+    max-width: 40%;
+    border-radius: 10px;
+}
+
+.modal__cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal__cerrar:hover {
+    color: black;
+}
+
+
+
+/*Ïnicio de sesion y registro*/
+.contenedor__general {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor__form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.contenedor__general h2 {
+    text-align: center;
+    color: #333;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.campo input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: black;
+}
+
+.btn-primario {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-primario:hover {
+    background-color: #0056b3;
+}
+
+.btn-secundario {
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn-secundario:hover {
+    background-color: #5a6268;
+}
+
+/* ----------------------------- SECCION-GUIA ----------------------------------- */
+.guia__contenedor {
+    height: auto;
+    margin: 0 80px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.3rem;
+}
+
+.guia__texto {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    border: 3px solid #dddddd;
+    margin-bottom: 30px;
+    border-radius: 40px;
+}
+
+.guia__parrafo {
+    width: 70%;
+    text-align: left;
+    padding: 30px;
+}
+
+.guia__contenedorImg {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.guia__img {
+    height: 200px;
+    width: 300px;
+}
+
+.guia__img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transform: rotate(2deg) skew(-10deg);
+    border-radius: 40px;
+    margin-left: 40px;
+    z-index: 20;
+    position: relative;
+    transition: all 0.6s;
+}
+
+.efecto {
+    height: 70px;
+    width: 280px;
+    transform: rotate(5deg) skew(-50deg);
+    border-radius: 10px;
+    background-color: #cccbcb73;
+    top: -80px;
+    left: 70px;
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.8s;
+}
+
+.guia__img img:hover {
+    transform: scale(1.1);
+}
+
+.guia__img img:hover+.efecto {
+    opacity: 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Estilos para Consejos Finales */
+.consejos__finales {
+    margin: 40px auto;
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.consejos__finales h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #000000;
+}
+
+.consejos__finales p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #161616;
+    text-align: justify;
+}
+
+.consejos__finales ul {
+    margin-top: 20px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.consejos__finales ul li {
+    margin-bottom: 15px;
+    color: #161616;
+    line-height: 1.5;
+}
+
+.consejos__finales ul li strong {
+    color: #000000;
+    font-weight: bold;
+}
+
+/*Pie de Pagina--------------------------*/
+
+/* Estilos del pie de página */
+.footer {
+    background-color: #000000;
+    color: #f0f0f0;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer .foot {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.footer .separador {
+    width: 50px;
+    height: 3px;
+    background-color: #ffb656;
+    margin: 10px auto;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #d0d0d0;
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+.footer a {
+    display: block;
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #0077ff;
+}
+
+.footer .foot3 a {
+    display: inline-block;
+    margin: 5px;
+    font-size: 20px;
+    color: #f0f0f0;
+    transition: color 0.3s ease;
+}
+
+.footer .foot3 a:hover {
+    color: #0077ff;
+}
+
+
+/*Playa de huanchaco--------------------------*/
+
+/* styles.css */
+
+nav ul {
+    list-style: none;
+
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#hero {
+    text-align: center;
+    background-color: #eee;
+    padding: 50px;
+}
+
+.atractivo {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/*Fin Playa de huanchaco--------------------------*/
+
+/* Para celulares y laptops */
+@media screen and (max-width: 1024px) {
+    .actividads {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contenido__imagen,
+    .contenido__texto {
+        width: 100%;
+        height: 50%;
+    }
+
+    .home {
+        height: 100vh;
+        background-image: url(../assets/imagenes/inicio_paraMovil.jpg);
+    }
+
+    .presentacion {
+        width: 100%;
+        text-align: center;
+        height: 100%;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .presentacion h1 {
+        margin-top: 70px;
+        font-size: 2rem;
+    }
+
+    .logo-contenedor {
+        position: relative;
+        left: 25%;
+    }
+
+    .inicio-sesion {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .inicio-sesion a {
+        color: transparent;
+        width: 50px;
+        height: 50px;
+        border: transparent;
+    }
+
+    .inicio__icono {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0;
+        font-size: 2.5rem;
+    }
+
+    .icons {
+        display: inline-flex;
+        position: absolute;
+    }
+
+    .nav {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgb(255, 255, 255);
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+
+    #check:checked~.nav {
+        height: 20rem;
+    }
+
+    .nav a {
+        font-size: 1.1rem;
+        gap: 5px;
+        text-align: center;
+        color: black;
+    }
+
+    .guia__contenedor {
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .guia__texto {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .guia__parrafo {
+        width: 100%;
+    }
+
+    .guia__contenedorImg {
+        width: 100%;
+    }
+
+    .guia__img {
+        width: 100%;
+    }
+
+    .guia__img img {
+        transform: none;
+        padding-bottom: 20px;
+        width: 250px;
+        margin: 0;
+    }
+
+    .efecto {
+        display: none;
+    }
+
+    .fondo-contacto {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-image: url(../assets/imagenes/333333.jpg);
+    }
+
+    .contacto-informacion {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        margin-top: 15%;
+    }
+
+    .contacto__formulario {
+        width: 100%;
+        padding: 40px 0;
+    }
+
+    .consejos__finales {
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .foot {
+        width: 100%;
+        text-align: center;
+    }
+
+    .foot3 {
+        height: auto;
+    }
+
+    .separador {
+        display: none;
+    }
+}

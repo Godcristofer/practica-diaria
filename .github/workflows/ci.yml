@@ -1,0 +1,54 @@
+name: PHP CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Descargar tu código
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2️⃣ Instalar PHP
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, intl, dom, pdo, pdo_mysql
+          coverage: none
+
+      # 3️⃣ Instalar dependencias (si usas Composer)
+      - name: Install dependencies
+        run: |
+          if [ -f composer.json ]; then
+            composer install --no-progress --no-interaction
+          else
+            echo "No composer.json found, skipping composer install"
+          fi
+
+      # 4️⃣ Ejecutar pruebas si existen
+      - name: Run PHPUnit tests
+        run: |
+          if [ -f vendor/bin/phpunit ]; then
+            vendor/bin/phpunit
+          else
+            echo "No PHPUnit tests found"
+          fi
+
+      # 5️⃣ Verificar sintaxis PHP
+      - name: PHP Syntax Check
+        run: |
+          find . -type f -name "*.php" -print0 | xargs -0 -n1 php -l
+
+      # 6️⃣ Subir artefacto listo para despliegue
+      - name: Upload build as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: php-build
+          path: .

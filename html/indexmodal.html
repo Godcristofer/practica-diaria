@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="../css/stilo2.css" rel="stylesheet"/>
-<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-<title>NorteAzul</title>
-<style>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/stilo2.css" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+        <title>NorteAzul</title>
+        <style>
         /* Additional styling for modal and other elements */
         .modal {
             display: none;
@@ -41,52 +42,59 @@
             cursor: pointer;
         }
     </style>
-<link href="style_responsive.css" rel="stylesheet"/></head>
-<body>
-<header>
-<div class="logo-contenedor">
-<img alt="Logo" class="logo" src="../assets/imagenes/logo01.png"/>
-<a class="NorteAzulFix" href="index.html"><h1>NorteAzul</h1></a>
-</div>
-<input id="check" type="checkbox"/>
-<label class="icons" for="check">
-<i class="bx bx-menu"></i>
-</label>
-<nav class="nav">
-<a href="#home">Inicio</a>
-<a href="#actividades">Actividades</a>
-<a href="#destinos">Destinos</a>
-<a href="#galeria">Galería</a>
-<a href="#guia">Guía de viajes</a>
-</nav>
-</header>
-<main>
-<section class="home" id="home">
-<div class="presentacion">
-<h1>DESCUBRE LAS MARAVILLAS DEL NORTE DEL PERÚ</h1>
-<p>Bienvenido a tu guía turística definitiva.</p>
-<button id="openModalBtn">Open Modal Form</button>
-</div>
-</section>
-<section id="actividades">
-<!-- Content for Actividades -->
-</section>
-<!-- Modal for form -->
-<div class="modal" id="myModal">
-<div class="modal-content">
-<span class="close">×</span>
-<h2>Formulario de Contacto</h2>
-<form id="contactForm">
-<label for="name">Nombre:</label>
-<input id="name" name="name" type="text"/>
-<label for="email">Correo Electrónico:</label>
-<input id="email" name="email" type="email"/>
-<button type="submit">Enviar</button>
-</form>
-</div>
-</div>
-</main>
-<script>
+    </head>
+
+    <body>
+        <header>
+            <div class="logo-contenedor">
+                <img src="../assets/imagenes/logo01.png" alt="Logo"
+                    class="logo" />
+                <a href="index.html" class="NorteAzulFix"><h1>NorteAzul</h1></a>
+            </div>
+
+            <input type="checkbox" id="check">
+            <label for="check" class="icons">
+                <i class='bx bx-menu'></i>
+            </label>
+            <nav class="nav">
+                <a href="#home">Inicio</a>
+                <a href="#actividades">Actividades</a>
+                <a href="#destinos">Destinos</a>
+                <a href="#galeria">Galería</a>
+                <a href="#guia">Guía de viajes</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="home">
+                <div class="presentacion">
+                    <h1>DESCUBRE LAS MARAVILLAS DEL NORTE DEL PERÚ</h1>
+                    <p>Bienvenido a tu guía turística definitiva.</p>
+                    <button id="openModalBtn">Open Modal Form</button>
+                </div>
+            </section>
+
+            <section id="actividades">
+                <!-- Content for Actividades -->
+            </section>
+
+            <!-- Modal for form -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Formulario de Contacto</h2>
+                    <form id="contactForm">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email">
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <script>
         // Constants and variables
         const modal = document.getElementById('myModal');
         const openModalBtn = document.getElementById('openModalBtn');
@@ -144,5 +152,6 @@
                 alert('Unknown action!');
         }
     </script>
-</body>
+    </body>
+
 </html>
